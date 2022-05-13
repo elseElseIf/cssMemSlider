@@ -7,21 +7,21 @@ body {
     background-color: rgb(210, 225, 225);
 }
 .wrapper {
-	height: 550px;
-	margin: 100px auto 0;
+	height: 30em;
+	margin: 1em auto 0;
 	position: relative;
-	width: 1000px;
+	width: 50em;
 }
 h1{
-    padding-bottom: 20px;
-    padding-left: calc(50% - 60px);
+    padding-bottom: 1em;
+    padding-left: calc(50% - 2em);
 }
 .slider{
     position: relative;
 	height: inherit;
     width: inherit;
 	overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 2em rgba(0, 0, 0, .5);
 }
 .slides {
 	height: inherit;
@@ -54,7 +54,13 @@ h1{
 	transform: scale(1);
 }
 .slides-text{
-    padding-top: 20px;
+    padding-top: 1em;
+	overflow-y:hidden;
+	transform: translateY(100%);
+	transition: .3s;
+}
+p{
+	transform: translateY(0);
 }
 .wrapper > input {
 	display: none;
@@ -62,31 +68,27 @@ h1{
 .wrapper label {
 	cursor: pointer;
 	display: inline-block;
-	height: 8px;
-	margin: 25px 12px 0 16px;
+	height: 0.5rem;
+	margin: 1em 1em 0 0.5em;
 	position: relative;
-	width: 8px;
+	width: 0.5rem;;
 	border-radius: 50%;
 	transition: width 2s;
+	background: rgb(196, 230, 60);
 }
-.wrapper label:hover, 
-#slide1:checked ~ .controls label:nth-of-type(1),
-#slide2:checked ~ .controls label:nth-of-type(2),
-#slide3:checked ~ .controls label:nth-of-type(3),
-#slide4:checked ~ .controls label:nth-of-type(4),
-#slide5:checked ~ .controls label:nth-of-type(5) {
+.wrapper label:hover {
 	background: rgb(234, 1, 1);
 }
 
 .wrapper label:after {
-	border: 2px solid rgb(7, 6, 6);
+	border: 0.1rem solid rgb(7, 6, 6);
 	content: " ";
 	display: block;
-	height: 12px;
-	left: -4px;
+	height: 0.8rem;
+	left: -0.2rem;
 	position: absolute;
-	top: -4px;
-	width: 12px;
+	top: -0.25rem;
+	width: 0.75rem;;
 	border-radius: 50%;
 }
 .slider-bottom{
@@ -94,3 +96,10 @@ h1{
     justify-content: space-between;
     flex-direction: row-reverse;    
 }
+@media (max-width: 1024px) {
+	.wrapper {
+		height: 20em;
+		width: 30em;
+	}
+ };
+ 
