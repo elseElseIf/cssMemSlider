@@ -74,12 +74,22 @@ p{
 	width: 0.5rem;;
 	border-radius: 50%;
 	transition: width 2s;
-	background: rgb(196, 230, 60);
+}
+#slide1:checked ~ .slider-bottom .controls label:nth-of-type(1),
+#slide2:checked ~ .slider-bottom .controls label:nth-of-type(2),
+#slide3:checked ~ .slider-bottom .controls label:nth-of-type(3),
+#slide4:checked ~ .slider-bottom .controls label:nth-of-type(4) {
+	background:  rgb(234, 1, 1);
+}
+#slide1:active ~ .slider-bottom .controls label:nth-of-type(1),
+#slide2:active ~ .slider-bottom .controls label:nth-of-type(2),
+#slide3:active ~ .slider-bottom .controls label:nth-of-type(3),
+#slide4:active ~ .slider-bottom .controls label:nth-of-type(4) {
+	background:  rgb(236, 232, 238);
 }
 .wrapper label:hover {
-	background: rgb(234, 1, 1);
+	background: rgb(137, 137, 146);
 }
-
 .wrapper label:after {
 	border: 0.1rem solid rgb(7, 6, 6);
 	content: " ";
