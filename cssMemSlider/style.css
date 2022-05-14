@@ -14,6 +14,7 @@ body {
 }
 h1 {
   padding-bottom: 1em;
+  padding-top: 1em;
   padding-left: calc(50% - 2em);
 }
 .slider {
